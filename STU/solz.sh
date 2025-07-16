@@ -20,7 +20,7 @@ hea1() {
     echo -e "${CYAN}~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~${NC}"
 }
 
-
+# UV Install
 uvsetup() {
     hea1 "UV Installation with packages"
 
@@ -52,8 +52,8 @@ uvsetup() {
     echo -e "${GREEN}***** Installation Completed *****${NC}"
 }
 
-# solna stuff 
-
+# Solana Install 
+# Source -  https://solana.com/docs/intro/installation
 solna_inst(){
     hea1 "Solna and Ancho Installation"
     co1="curl --proto '=https' --tlsv1.2 -sSfL https://solana-install.solana.workers.dev | bash"
@@ -75,5 +75,16 @@ solna_inst(){
     echo -e "${GREEN}***** Solna and Ancho Installation Completed *****${NC}"
 }
 
+# Muchio CLI Install 
+# Source -https://github.com/solana-foundation/mucho
+mucho_cli() {
+    hea1 "Mucho Cli Install - Solana Utils"
+    co1="bun install -gy mucho@latest"
+    echo -e "--- Executing ${co1} ---"
+    eval "$co1"
+    echo -e "${GREEN}***** Mucho CLI Installation Completed *****${NC}"
+}
+
 # Execute 
-solna_inst
+# solna_inst
+mucho_cli
