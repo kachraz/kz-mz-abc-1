@@ -70,6 +70,16 @@ gemini_install() {
     echo -e "${GREEN}***** Installation Completed *****${NC}"
 }
 
+# ///////////////// OpenCode //////////////////////////
+opencode_install()  {
+    hea1 "OpenCode ClaudeCode Alternative"
+    co1="go install github.com/opencode-ai/opencode@latest"
+    echo -e "${GREEN} Executing Install: ${NC}"
+    echo -e "--- Executing ${co1} ---"
+    eval "$co1"
+    echo -e "${GREEN}***** Installation Completed *****${NC}"
+}
+
 # ////////////////// UV Setup ///////////////////////////
 
 ## UV Tavily Setup
@@ -105,5 +115,6 @@ uv_tavily_setup() {
 }
 
 # Execution
-gemini_install
-rovo_install
+# gemini_install
+# rovo_install
+opencode_install
