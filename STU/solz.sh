@@ -80,8 +80,11 @@ solna_inst(){
 mucho_cli() {
     hea1 "Mucho Cli Install - Solana Utils"
     co1="bun install -gy mucho@latest"
+    co2="bunx mucho@latest self-update"
     echo -e "--- Executing ${co1} ---"
     eval "$co1"
+    echo -e "--- Executing ${co2} ---"
+    eval "$co2"
     echo -e "${GREEN}***** Mucho CLI Installation Completed *****${NC}"
 }
 
